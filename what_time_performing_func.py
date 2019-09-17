@@ -1,9 +1,9 @@
 import time
 
 def decorator_time(fn):
-    def wrapper():
+    def wrapper(*args, **kwargs):
         time.sleep(2)
-        return fn()
+        return fn(*args, **kwargs)
     return wrapper
 
 @decorator_time

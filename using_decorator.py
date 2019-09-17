@@ -13,9 +13,9 @@ def decorator_tag_a(fn):
         return '<a>' + fn() + '</a>'
     return wrapped
 
+@decorator_tag_div
 @decorator_tag_a
 @decorator_tag_span
-@decorator_tag_div
 def name():
     return 'Hello'
 
